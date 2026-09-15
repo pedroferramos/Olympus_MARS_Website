@@ -1,0 +1,13 @@
+.team-container { padding: 60px 8vw; max-width: 1200px; margin: 0 auto; }
+
+.dept-title { font-family: var(--font-head); color: var(--orange); font-size: 1.5rem; margin: 40px 0 20px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+
+.member-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; }
+
+.member-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; text-align: center; }
+
+.member-name { font-family: var(--font-head); font-size: 1rem; color: #fff; }
+
+.member-role { font-size: 0.85rem; color: var(--text-grey); margin: 6px 0 12px; }
+
+.member-links a { color: var(--blue); text-decoration: none; font-size: 0.8rem; margin: 0 6px; }
