@@ -536,17 +536,31 @@
 
 .timeline-point.active .dot {
             background: var(--orange);
+            border-color: var(--orange);
             box-shadow: 0 0 20px rgba(235,110,42,0.5);
-            animation: dotPulse 2s ease-in-out infinite;
+            animation: orangeDotPulse 2s ease-in-out infinite;
+        }
+
+.timeline-point.current .dot {
+            background: var(--blue);
+            border-color: var(--blue);
+            box-shadow: 0 0 20px rgba(38,176,229,0.5);
+            animation: blueDotPulse 2s ease-in-out infinite;
         }
 
 .timeline-point.inactive .dot {
+            background: var(--bg-dark);
             border-color: var(--text-muted);
         }
 
-@keyframes dotPulse {
+@keyframes orangeDotPulse {
             0%, 100% { box-shadow: 0 0 10px rgba(235,110,42,0.4); }
             50% { box-shadow: 0 0 30px rgba(235,110,42,0.8); }
+        }
+
+@keyframes blueDotPulse {
+            0%, 100% { box-shadow: 0 0 10px rgba(38,176,229,0.35); }
+            50% { box-shadow: 0 0 30px rgba(38,176,229,0.9); }
         }
 
 .point-content {
@@ -570,7 +584,15 @@
             font-weight: 300;
         }
 
-.timeline-point.inactive .point-content h4 { color: var(--text-muted); }
+.timeline-point.current .point-content h4,
+.timeline-point.current .point-content p {
+            color: var(--blue);
+        }
+
+.timeline-point.inactive .point-content h4,
+.timeline-point.inactive .point-content p {
+            color: var(--text-muted);
+        }
 
 .cta-section {
             padding: 100px 8vw;
